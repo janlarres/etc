@@ -1,0 +1,71 @@
+* {
+    font: "sans-serif 18";
+    background-color: @bg;
+    text-color: @fg;
+}
+
+window {
+    border: 2px;
+    border-radius: 10px;
+    border-color: @border-fg;
+    padding: 20px;
+    spacing: 0;
+    width: 30em;
+}
+
+mainbox {
+    spacing: 0.5em;
+}
+
+inputbar {
+    padding: 6px 6px 6px 15px;
+    spacing: 10px;
+    border-radius: 5px;
+    background-color: @input-bg;
+    children: [textbox-prompt, entry, case-indicator];
+}
+
+textbox-prompt {
+    expand: false;
+    content: ">";
+    text-color: @prompt-fg;
+    background-color: inherit;
+}
+
+entry {
+    font: "sans-serif Bold 18";
+    background-color: inherit;
+}
+
+case-indicator {
+    background-color: inherit;
+}
+
+listview {
+    padding: 3px 0px 3px 0px;
+    scrollbar: true;
+}
+
+element {
+    padding: 4px 0px 4px 20px;
+    spacing: 0.5em;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    highlight: @element-highlight;
+}
+element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+    size: 1em;
+}
+element selected.normal {
+    background-color: @element-selected-bg;
+    text-color:       @element-selected-fg;
+}
+
+scrollbar {
+    handle-color: @scrollbar-color;
+    padding: 0px 6px 0px 10px;
+}

@@ -142,6 +142,7 @@ dotfiles:
   d_rofi:
     src: rofi
     dst: ~/.config/rofi
+      - ln "$HOME/.config/rofi/themes/dark.rasi" "$HOME/.config/rofi/themes/current.rasi"
   d_sway:
     src: sway
     dst: ~/.config/sway

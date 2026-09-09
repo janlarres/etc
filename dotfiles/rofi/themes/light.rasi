@@ -1,0 +1,13 @@
+* {
+    fg: #546e7a;
+    bg: #fafafa;
+    border-fg: #00bcd4;
+    input-bg: #eeeeee;
+    prompt-fg: #999999;
+    element-highlight: bold #e53935;
+    element-selected-bg: #00bcd4;
+    element-selected-fg: #fafafa;
+    scrollbar-color: #aaaaaa;
+}
+
+@import "common"

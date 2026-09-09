@@ -57,6 +57,7 @@ def main(args: argparse.Namespace) -> int:
     if platform.system() == "Linux":
         handle_awesome(is_dark)
         handle_gnome(is_dark)
+        handle_rofi(is_dark)
         handle_xsettings(is_dark)
 
     return 0
@@ -125,6 +126,16 @@ def handle_sway(is_dark: bool) -> None:
 
     script_path = XDG_CONFIG_HOME / "sway/toggle-dark.py"
     run([script_path, "dark" if is_dark else "light"], check=True)
+
+
+def handle_rofi(is_dark: bool) -> None:
+    theme_path = XDG_CONFIG_HOME / "rofi/themes"
+    link_path = theme_path / "current.rasi"
+    target = "dark.rasi" if is_dark else "light.rasi"
+
+    if link_path.exists():
+        link_path.unlink()
+    link_path.symlink_to(theme_path / target)
 
 
 def set_gsettings(setting: str, value: str) -> None:
