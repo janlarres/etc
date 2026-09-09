@@ -22,7 +22,8 @@ set $term kitty --single-instance
 # on the original workspace that the command was run on.
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
 # set $menu wmenu-run
-set $menu fuzzel
+# set $menu fuzzel
+set $menu rofi -show combi
 
 include /etc/sway/config-vars.d/*
 
