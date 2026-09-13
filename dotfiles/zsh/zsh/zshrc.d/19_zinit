@@ -30,11 +30,6 @@ zinit as"null" from"gh-r" for \
     light-mode id-as"starship" lbin"!" bpick"*.tar.gz" @starship/starship \
     light-mode id-as"atuin" lbin"!atuin-*/atuin" bpick"atuin-[ax]*.tar.gz" @atuinsh/atuin
 
-# mise
-zinit as"null" from"gh-r" for \
-    light-mode id-as"usage" lbin"!" @jdx/usage \
-    light-mode id-as"mise" lbin"!mise-* -> mise" @jdx/mise
-
 # various tools
 zinit as"null" from"gh-r" completions for \
     id-as"bat" light-mode lbin"!bat-*/bat" @sharkdp/bat \
@@ -55,6 +50,7 @@ zinit as"null" from"gh-r" completions for \
     id-as"jless" light-mode lbin"!" @PaulJuliusMartinez/jless \
     id-as"lazygit" light-mode lbin"!" @jesseduffield/lazygit \
     id-as"mdcat" light-mode lbin"!mdcat-*/mdcat" @BIRSAx2/mdcat \
+    id-as"mise" light-mode lbin"!mise-* -> mise" @jdx/mise \
     id-as"onefetch" light-mode lbin"!" @o2sh/onefetch \
     id-as"ouch" light-mode lbin"!ouch-*/ouch" \
         atclone"cp -vf ouch-*/man/*.1 ${ZINIT[MAN_DIR]}/man1" \
