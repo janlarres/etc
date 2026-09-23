@@ -1,6 +1,7 @@
 # backup files
 *~
 
+.DS_Store
 .nfs*
 
 # object files
