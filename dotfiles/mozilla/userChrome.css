@@ -17,11 +17,10 @@
 
 /* Make the vertical tabs sidebar more compact */
 #tabbrowser-tabs[orient="vertical"] {
+    --tab-padding-block-end: 0 !important;
     & .tabbrowser-tab {
         padding-block: 0px !important;
     }
-}
-#tabbrowser-tabs[orient="vertical"] {
     & .tab-background {
         @media (-moz-platform: linux) {
             margin-block: 0 !important;
@@ -40,6 +39,9 @@
 .tab-group-label-container {
     #tabbrowser-tabs[orient="vertical"] & {
         margin-block-start: 0 !important;
+        tab-group:not([collapsed]) > &, tab-group[collapsed][hasactivetab] > & {
+            padding-block-end: 0 !important;
+        }
     }
 }
 .tab-group-label-hover-highlight {
