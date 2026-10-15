@@ -418,7 +418,12 @@ case "$MIME_TYPE" in
                     *)
                         MIME_ENC=$(file --mime-encoding --dereference --brief "$FILE_PATH")
                         if [[ "$MIME_ENC" != binary ]]; then
-                            hl "$FILE_PATH"
+                            FIRST_LINE=$(head -n 1 "$FILE_PATH")
+                            if [[ "$MIME_TYPE" == text/plain && "$FIRST_LINE" =~ "uv run --script" ]]; then
+                                hl -l python "$FILE_PATH"
+                            else
+                                hl "$FILE_PATH"
+                            fi
                         else
                             xfile "$FILE_PATH"
                         fi
