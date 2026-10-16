@@ -50,6 +50,8 @@ if [[ "$TERM" == xterm-kitty ]]; then
     export EZA_ICON_SPACING=2
 fi
 
+export ATUIN_CONFIG_DIR="$DOTFILES/atuin"
+
 export BIBTOOLRSC="$DOTFILES/bibtoolrsc"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg

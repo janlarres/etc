@@ -1,15 +1,6 @@
 # https://atuin.sh/docs/config/
 
-## where to store your database, default is your system data directory
-## mac: ~/Library/Application Support/com.elliehuxtable.atuin/history.db
-## linux: ~/.local/share/atuin/history.db
-# db_path = "~/.local/share/atuin/history.db"
-
-## where to store your encryption key, default is your system data directory
-# key_path = "~/.local/share/atuin/key"
-
-## where to store your auth session token, default is your system data directory
-# session_path = "~/.local/share/atuin/session"
+data_dir = "~/.local/share/atuin"
 
 ## date format used, either "us" or "uk"
 dialect = "uk"
@@ -90,3 +81,7 @@ records = true
 [daemon]
 enabled = true
 autostart = true
+pidfile_path = "$XDG_RUNTIME_DIR/atuin-daemon.pid"
+
+[logs]
+dir = "$XDG_STATE_HOME/atuin/logs"
